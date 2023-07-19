@@ -2,5 +2,10 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+remappings = ["@openzeppelin=lib/openzeppelin-contracts/"]
+#for DevOpsTools, in order for us to be able to run command 
+ffi = true 
+#in order for us to be able to use a foundry cheat code reading the contents of a file, add:
+fs_permissions = [{access = "read", path = "./img/"}]
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
