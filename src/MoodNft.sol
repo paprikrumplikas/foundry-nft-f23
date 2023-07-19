@@ -4,6 +4,8 @@ pragma solidity ^0.8.18;
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 
+//deployed to Sepolia 0x28Ad65ff01E5B9A8e8F4f405FFC65626E42b5Bd8
+
 /*An NFT needs a URI.
 We can convert SVG to a URI that our browser can interpret.
 
@@ -98,10 +100,5 @@ contract MoodNft is ERC721 {
         } else {
             s_tokenIdToMood[tokenId] = Mood.HAPPY;
         }
-    }
-
-    //getter functions
-    function getMood(uint256 tokenId) internal returns (Mood) {
-        return s_tokenIdToMood[tokenId];
     }
 }
